@@ -1,0 +1,30 @@
+{{#isInput}}
+    <input type="{{htmlType}}"
+           name="{{htmlName}}"
+           id="{{htmlId}}"
+           class="form-control"
+           value="{{htmlValue}}"
+    />
+{{/isInput}}
+
+{{#isDropdown}}
+    <select name="{{htmlName}}"
+            id="{{htmlId}}"
+            class="form-select"
+    >
+        {{#emptyOptionShow}}
+            <option value="{{emptyOptionValue}}">{{emptyOptionTitle}}</option>
+        {{/emptyOptionShow}}
+
+        {{#options}}
+            <option value="{{value}}" {{selected}}>{{title}}</option>
+        {{/options}}
+    </select>
+{{/isDropdown}}
+
+{{#isTextarea}}
+    <textarea name="{{htmlName}}"
+            id="{{htmlId}}"
+            class="form-control"
+    >{{htmlValue}}</textarea>
+{{/isTextarea}}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{pageTitle}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="{{appBasePath}}">
+
+    {{> partials/stylesheets }}
+    {{> partials/pageStylesheetsHead }}
+</head>
+<body>
+
+{{> partials/mainmenu }}
+
+<div class="container-fluid">
+    <main>
+    {{{pageContent}}}
+    </main>
+</div>
+
+{{> partials/pageScriptsBodyEnd }}
+
+</body>
+</html>

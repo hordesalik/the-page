@@ -1,0 +1,39 @@
+services:
+  the-page-backend:
+    hostname: the-page-backend
+    build:
+      dockerfile: ./backend/dev.Dockerfile
+    ports:
+      - 3031:80
+      - 9229:9229
+    volumes:
+      - ./backend/src:/src
+    environment:
+      HTTP_SERVER_PORT: "8080"
+      MONGO_URI_FILE: /run/secrets/mongo_uri
+      JWT_SECRET_FILE: /run/secrets/backend_gwt_secret
+      APP_BASE_PATH: /
+      FRONTEND_BASE_URL: http://localhost:3032
+    secrets:
+      - backend_gwt_secret
+      - mongo_uri
+  the-page-frontend:
+    hostname: the-page-frontend
+    build:
+      dockerfile: ./frontend/dev.Dockerfile
+    ports:
+      - 3032:80
+      - 9230:9229
+    volumes:
+      - ./frontend/src:/src
+    environment:
+      HTTP_SERVER_PORT: "8080"
+      MONGO_URI_FILE: /run/secrets/mongo_uri
+      APP_BASE_HOSTNAME: thepage.local
+    secrets:
+      - mongo_uri
+secrets:
+  mongo_uri:
+    file: mongo_uri.txt
+  backend_gwt_secret:
+    file: backend_gwt_secret.txt

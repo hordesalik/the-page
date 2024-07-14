@@ -1,0 +1,15 @@
+<h1>Create Account</h1>
+
+{{#createAccountForm}}
+    <form method="post" class="form-md">
+        {{> form/fields }}
+
+        {{> partials/form/errorFields }}
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">
+                Create Account
+            </button>
+        </div>
+    </form>
+{{/createAccountForm}}

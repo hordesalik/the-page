@@ -1,0 +1,6 @@
+/.idea/
+/.vscode/
+/mongo_uri.txt
+/backend_gwt_secret.txt
+/backend/src/node_modules/
+/frontend/src/node_modules/

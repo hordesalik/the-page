@@ -1,0 +1,9 @@
+<h1>Accounts List</h1>
+
+<a href="./admin/accounts/create">Create Account...</a>
+
+{{#accounts}}
+    <li>
+        <a href="./admin/accounts/edit/{{id}}">{{name}}</a>
+    </li>
+{{/accounts}}

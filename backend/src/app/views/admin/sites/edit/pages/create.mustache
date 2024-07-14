@@ -1,0 +1,15 @@
+<h1>Create Page</h1>
+
+{{#sitePageCreateForm}}
+    <form method="post" class="form-md">
+        {{> form/fields }}
+
+        {{> partials/form/errorFields }}
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">
+                Create Site Page
+            </button>
+        </div>
+    </form>
+{{/sitePageCreateForm}}

@@ -1,0 +1,11 @@
+<h1>Site Pages</h1>
+
+<a href="./admin/sites/edit/{{site.id}}/pages/create">Crate Page...</a>
+
+<ul>
+    {{#sitePages}}
+        <li>
+            <a href="./admin/sites/edit/{{site.id}}/pages/edit/{{id}}">{{name}}</a>
+        </li>
+    {{/sitePages}}
+</ul>

@@ -1,0 +1,15 @@
+<h1>Log In</h1>
+
+{{#loginFormModel}}
+    <form method="post" class="mx-auto form-xs">
+        {{> form/fields }}
+
+        {{> partials/form/errorFields }}
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary w-100 btn-lg">
+                Log In
+            </button>
+        </div>
+    </form>
+{{/loginFormModel}}

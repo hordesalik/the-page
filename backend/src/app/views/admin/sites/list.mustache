@@ -1,0 +1,33 @@
+<h1>Sites List</h1>
+
+{{#sitesListForm}}
+    <form method="get">
+        {{#accountIdDropdownFormField}}
+            <div class="mb-3 row form-field">
+                <div class="col-auto">
+                    {{> form/fieldLabel }}
+                </div>
+
+                <div class="col-auto">
+                    {{> form/fieldInput }}
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">
+                        Show Sites
+                    </button>
+                </div>
+            </div>
+        {{/accountIdDropdownFormField}}
+    </form>
+{{/sitesListForm}}
+
+<div class="mb-3">
+    <a href="./admin/sites/create?accountId={{accountId}}">Create Site...</a>
+</div>
+
+{{#sites}}
+    <li>
+        <a href="./admin/sites/edit/{{id}}">{{name}}</a>
+    </li>
+{{/sites}}

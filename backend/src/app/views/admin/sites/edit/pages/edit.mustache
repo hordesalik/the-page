@@ -1,0 +1,22 @@
+<h1>Edit Site Page</h1>
+
+{{#sitePageEditForm}}
+    <form method="post" class="form-md">
+        {{> form/fields }}
+
+        {{> partials/form/errorFields }}
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">
+                Save Site Page
+            </button>
+
+            <a href="./admin/sites/edit/{{site.id}}/pages/redirect-to-frontend/{{sitePage.id}}"
+               target="_blank"
+               class="btn btn-default"
+            >
+                Open Site Page...
+            </a>
+        </div>
+    </form>
+{{/sitePageEditForm}}

@@ -1,0 +1,15 @@
+<h1>Sign Up</h1>
+
+{{#signupFormModel}}
+    <form method="post" class="mx-auto form-xs">
+        {{> form/fields }}
+
+        {{> partials/form/errorFields }}
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary w-100 btn-lg">
+                Sign Up
+            </button>
+        </div>
+    </form>
+{{/signupFormModel}}
