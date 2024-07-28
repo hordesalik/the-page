@@ -12,9 +12,16 @@ export const mongooseInstance = {
             console.log('Mongoose error', e);
         });
 
-        const MONGO_URI = fs.readFileSync(process.env.MONGO_URI_FILE, 'utf8');
+        const {
+            MONGO_URI_FILE,
+            MONGO_HEARTBEAT_FREQUENCY_MS
+        } = process.env;
 
-        return mongoose.connect(MONGO_URI);
+        const MONGO_URI = fs.readFileSync(MONGO_URI_FILE, 'utf8');
+
+        return mongoose.connect(MONGO_URI, {
+            heartbeatFrequencyMS: MONGO_HEARTBEAT_FREQUENCY_MS
+        });
     }
 };
 
