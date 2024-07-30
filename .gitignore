@@ -5,3 +5,6 @@
 /backend/src/node_modules/
 /frontend/src/node_modules/
 /mongo_data/
+/me_config_basicauth_password.txt
+/me_config_basicauth_username.txt
+/me_config_basicauth.txt

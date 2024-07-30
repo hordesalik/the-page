@@ -30,6 +30,13 @@ services:
       ME_CONFIG_MONGODB_SERVER: the-page-mongo
       ME_CONFIG_MONGODB_HOST: the-page-mongo
       ME_CONFIG_BASICAUTH: false
+      ME_CONFIG_BASICAUTH_FILE: /run/secrets/me_config_basicauth
+      ME_CONFIG_BASICAUTH_USERNAME_FILE: /run/secrets/me_config_basicauth_username
+      ME_CONFIG_BASICAUTH_PASSWORD_FILE: /run/secrets/me_config_basicauth_password
+    secrets:
+      - me_config_basicauth
+      - me_config_basicauth_username
+      - me_config_basicauth_password
 
   the-page-backend:
     hostname: the-page-backend
@@ -75,6 +82,12 @@ services:
       - mongo_uri
 
 secrets:
+  me_config_basicauth:
+    file: me_config_basicauth.txt
+  me_config_basicauth_username:
+    file: me_config_basicauth_username.txt
+  me_config_basicauth_password:
+    file: me_config_basicauth_password.txt
   mongo_uri:
     file: mongo_uri.txt
   backend_gwt_secret:
