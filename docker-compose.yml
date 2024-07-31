@@ -28,7 +28,7 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://the-page-mongo:27017/
       ME_CONFIG_MONGODB_SERVER: the-page-mongo
       ME_CONFIG_MONGODB_HOST: the-page-mongo
-      ME_CONFIG_BASICAUTH: false
+      ME_CONFIG_BASICAUTH: "false"
       ME_CONFIG_BASICAUTH_FILE: /run/secrets/me_config_basicauth
       ME_CONFIG_BASICAUTH_USERNAME_FILE: /run/secrets/me_config_basicauth_username
       ME_CONFIG_BASICAUTH_PASSWORD_FILE: /run/secrets/me_config_basicauth_password
