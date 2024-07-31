@@ -19,8 +19,7 @@ services:
   the-page-mongo-express:
     hostname: the-page-mongo-express
     depends_on:
-      the-page-mongo:
-        condition: service_healthy
+      - the-page-mongo
     image: mongo-express:1.0.2
     restart: always
     ports:
@@ -41,8 +40,7 @@ services:
   the-page-backend:
     hostname: the-page-backend
     depends_on:
-      the-page-mongo:
-        condition: service_healthy
+      - the-page-mongo
     build:
       dockerfile: ./backend/dev.Dockerfile
     restart: always
@@ -64,8 +62,7 @@ services:
   the-page-frontend:
     hostname: the-page-frontend
     depends_on:
-      the-page-mongo:
-        condition: service_healthy
+      - the-page-mongo
     build:
       dockerfile: ./frontend/dev.Dockerfile
     restart: always
